@@ -19,14 +19,18 @@ const Hero = ({ onNavigate }) => {
             className="relative h-screen flex items-center justify-center overflow-hidden"
         >
             {/* Background with Parallax */}
-            <div
-                className="absolute inset-0 z-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: 'url("https://images.unsplash.com/photo-1541976544320-a9e90c73dc27?q=80&w=2000&auto=format")',
-                    transform: `translateY(${offset * 0.5}px)`, // Parallax speed 0.5
-                }}
-            >
-                <div className="absolute inset-0 bg-primary/80 backdrop-blur-[2px]"></div>
+            {/* Background Video */}
+            <div className="absolute inset-0 z-0">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                >
+                    <source src="/construction crafters web video.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
             </div>
 
             {/* Content */}
